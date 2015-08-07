@@ -12,7 +12,7 @@ ifdef GENERATOR
 	CMAKE_FLAGS+= -G"${GENERATOR}"
 endif
 
-libs: src/luv.so src/openssl.so src/bit.so
+libs: src/lib/luv.so src/lib/openssl.so src/lib/bit.so
 
 run: libs
 	cd src && lua boot.lua
@@ -26,12 +26,12 @@ build: deps/luv/deps/libuv/include
 	cmake $(CMAKE_FLAGS) -H. -Bbuild
 	cmake --build build --config Release
 
-src/luv.so: build
-	cp build/deps/luv/luv.so src/luv.so
-src/openssl.so: build
-	cp build/liblua_openssl.so src/openssl.so
-src/bit.so: build
-	cp build/bit.so src/bit.so
+src/lib/luv.so: build
+	cp build/deps/luv/luv.so src/lib/luv.so
+src/lib/openssl.so: build
+	cp build/liblua_openssl.so src/lib/openssl.so
+src/lib/bit.so: build
+	cp build/bit.so src/lib/bit.so
 
 clean:
 	rm -rf build
