@@ -3,11 +3,10 @@ A sample web app using just lua and luv.
 
 ## Making Luv
 
-To build the luv library you need to install cmake and lua on your system.  I
-tested with Lua 5.2.3 and CMake 3.3.0 on OSX, but should work with other
-combinations.  You also need your system's C compiler.
+To build the luv library you need to install **cmake** and **lua** development
+headers on your system.
 
-Once you have the build dependencies, clone this repo and run `make`.
+Once you have these dependencies, clone this repo and run `make`.
 
 ```sh
 git clone git@github.com:creationix/luvweb.git
