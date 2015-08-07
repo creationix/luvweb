@@ -49,3 +49,6 @@
 [submodule "src/lib/path"]
 	path = src/lib/path
 	url = https://github.com/creationix/luv-path.git
+[submodule "src/lib/weblit"]
+	path = src/lib/weblit
+	url = https://github.com/creationix/luv-weblit.git
