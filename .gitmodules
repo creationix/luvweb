@@ -3,46 +3,46 @@
 	url = https://github.com/luvit/luv.git
 [submodule "src/lib/pretty-print"]
 	path = src/lib/pretty-print
-	url = git@github.com:creationix/luv-pretty-print.git
+	url = https://github.com/creationix/luv-pretty-print.git
 [submodule "src/lib/coro-channel"]
 	path = src/lib/coro-channel
-	url = git@github.com:creationix/luv-coro-channel.git
+	url = https://github.com/creationix/luv-coro-channel.git
 [submodule "src/lib/coro-net"]
 	path = src/lib/coro-net
-	url = git@github.com:creationix/luv-coro-net.git
+	url = https://github.com/creationix/luv-coro-net.git
 [submodule "src/lib/http-codec"]
 	path = src/lib/http-codec
-	url = git@github.com:creationix/luv-http-codec.git
+	url = https://github.com/creationix/luv-http-codec.git
 [submodule "src/lib/coro-http"]
 	path = src/lib/coro-http
-	url = git@github.com:creationix/luv-coro-http.git
+	url = https://github.com/creationix/luv-coro-http.git
 [submodule "src/lib/coro-tls"]
 	path = src/lib/coro-tls
-	url = git@github.com:creationix/luv-coro-tls.git
+	url = https://github.com/creationix/luv-coro-tls.git
 [submodule "src/lib/coro-wrapper"]
 	path = src/lib/coro-wrapper
-	url = git@github.com:creationix/luv-coro-wrapper.git
+	url = https://github.com/creationix/luv-coro-wrapper.git
 [submodule "src/lib/json"]
 	path = src/lib/json
-	url = git@github.com:creationix/luv-json.git
+	url = https://github.com/creationix/luv-json.git
 [submodule "src/lib/mime"]
 	path = src/lib/mime
-	url = git@github.com:creationix/luv-mime.git
+	url = https://github.com/creationix/luv-mime.git
 [submodule "src/lib/coro-fs"]
 	path = src/lib/coro-fs
-	url = git@github.com:creationix/luv-coro-fs.git
+	url = https://github.com/creationix/luv-coro-fs.git
 [submodule "src/lib/querystring"]
 	path = src/lib/querystring
-	url = git@github.com:creationix/luv-querystring.git
+	url = https://github.com/creationix/luv-querystring.git
 [submodule "src/lib/websocket-codec"]
 	path = src/lib/websocket-codec
-	url = git@github.com:creationix/luv-websocket-codec.git
+	url = https://github.com/creationix/luv-websocket-codec.git
 [submodule "src/lib/path"]
 	path = src/lib/path
-	url = git@github.com:creationix/luv-path.git
+	url = https://github.com/creationix/luv-path.git
 [submodule "lua-openssl"]
 	path = lua-openssl
 	url = https://github.com/zhaozg/lua-openssl.git
 [submodule "bitop"]
 	path = bitop
-	url = git@github.com:luvit/bitop.git
+	url = https://github.com/luvit/bitop.git

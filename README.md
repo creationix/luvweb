@@ -13,7 +13,7 @@ sudo apt-get install build-essential cmake liblua5.2-dev lua5.2 libssl-dev
 Once you have these dependencies, clone this repo and run `make`.
 
 ```sh
-git clone git@github.com:creationix/luvweb.git
+git clone https://github.com/creationix/luvweb.git
 cd luvweb
 make
 ```
