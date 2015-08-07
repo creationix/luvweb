@@ -8,37 +8,30 @@ ifeq ($(OS),Linux)
 export PREFIX=/usr
 endif
 
+ifdef GENERATOR
+	CMAKE_FLAGS+= -G"${GENERATOR}"
+endif
 
 libs: src/luv.so src/openssl.so src/bit.so
 
 run: libs
 	cd src && lua boot.lua
 
-src/luv.so: build/luv.so
-	cp build/luv.so src/luv.so
-src/openssl.so: lua-openssl/openssl.so
-	cp lua-openssl/openssl.so src/openssl.so
-src/bit.so: bitop/bit.so
-	cp bitop/bit.so src/bit.so
-
-luv/deps:
+deps/luv/deps/libuv/include:
 	git submodule update --init
-luv/deps/libuv/include/uv.h: luv/deps
-	cd luv && git submodule update --init deps/libuv
-build:
-	mkdir build
+	cd deps/luv && git submodule update --init deps/libuv
 
-build/luv.so: build luv/deps/libuv/include/uv.h
-	cd build && cmake ../luv -DWITH_LUA_ENGINE=Lua -DLUA_BUILD_TYPE=System
+build: deps/luv/deps/libuv/include
+	mkdir build
+	cmake $(CMAKE_FLAGS) -H. -Bbuild
 	cmake --build build --config Release
 
-lua-openssl/openssl.so: luv/deps
-	$(MAKE) -C lua-openssl
-
-bitop/bit.so: luv/deps
-	$(MAKE) -C bitop $(BIT_EXTRA)
+src/luv.so: build
+	cp build/deps/luv/luv.so src/luv.so
+src/openssl.so: build
+	cp build/liblua_openssl.so src/openssl.so
+src/bit.so: build
+	cp build/bit.so src/bit.so
 
 clean:
-	git clean -xdf
-	$(MAKE) -C bitop clean
-	$(MAKE) -C lua-openssl clean
+	rm -rf build
