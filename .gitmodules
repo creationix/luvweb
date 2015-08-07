@@ -36,7 +36,7 @@
 	url = git@github.com:creationix/luv-querystring.git
 [submodule "src/lib/websocket-codec"]
 	path = src/lib/websocket-codec
-	url = git@github.com:creationix/lua-websocket-codec.git
+	url = git@github.com:creationix/luv-websocket-codec.git
 [submodule "src/lib/path"]
 	path = src/lib/path
 	url = git@github.com:creationix/luv-path.git
