@@ -21,7 +21,7 @@ make
 ## Starting app
 
 Once you have `src/luv.so` built successfully, simply enter the src directory
-and run `main.lua` with `lua`.  Or if you're lazy, use the `run` target in the
+and run `boot.lua` with `lua`.  Or if you're lazy, use the `run` target in the
 Makefile.
 
 ```sh
