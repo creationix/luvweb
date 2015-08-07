@@ -1,12 +1,14 @@
-all: src/luv.so src/openssl.so
+libs: src/luv.so src/openssl.so src/bit.so
+
+run: libs
+	cd src && lua boot.lua
 
 src/luv.so: build/luv.so
 	cp build/luv.so src/luv.so
 src/openssl.so: lua-openssl/openssl.so
 	cp lua-openssl/openssl.so src/openssl.so
-
-run: src/luv.so src/openssl.so
-	cd src && lua boot.lua
+src/bit.so: bitop/bit.so
+	cp bitop/bit.so src/bit.so
 
 luv/deps:
 	git submodule update --init
@@ -22,5 +24,8 @@ build/luv.so: build luv/deps/libuv/include/uv.h
 lua-openssl/openssl.so: luv/deps
 	PREFIX=/usr ${MAKE} -C lua-openssl
 
+bitop/bit.so: luv/deps
+	${MAKE} -C bitop
+	
 clean:
 	git clean -xdf

@@ -43,3 +43,6 @@
 [submodule "lua-openssl"]
 	path = lua-openssl
 	url = https://github.com/zhaozg/lua-openssl.git
+[submodule "bitop"]
+	path = bitop
+	url = git@github.com:luvit/bitop.git
