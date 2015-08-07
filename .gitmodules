@@ -1,10 +1,13 @@
-[submodule "luv"]
+[submodule "deps/luv"]
 	path = deps/luv
 	url = https://github.com/luvit/luv.git
-[submodule "lua-openssl"]
+[submodule "deps/lua-openssl"]
 	path = deps/lua-openssl
 	url = https://github.com/zhaozg/lua-openssl.git
-[submodule "bitop"]
+[submodule "deps/openssl"]
+	path = deps/openssl
+	url = https://github.com/luvit/openssl.git
+[submodule "deps/bitop"]
 	path = deps/bitop
 	url = https://github.com/luvit/bitop.git
 [submodule "src/lib/pretty-print"]
@@ -46,6 +49,3 @@
 [submodule "src/lib/path"]
 	path = src/lib/path
 	url = https://github.com/creationix/luv-path.git
-[submodule "deps/openssl"]
-	path = deps/openssl
-	url = https://github.com/luvit/openssl.git
