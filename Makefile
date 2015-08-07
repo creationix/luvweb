@@ -1,3 +1,14 @@
+OS:=$(shell uname -s)
+ifeq ($(OS),Darwin)
+# bitlib needs a flag on macs
+BIT_EXTRA:=macosx
+endif
+ifeq ($(OS),Linux)
+# Look for system lua on linux
+export PREFIX=/usr
+endif
+
+
 libs: src/luv.so src/openssl.so src/bit.so
 
 run: libs
@@ -22,10 +33,12 @@ build/luv.so: build luv/deps/libuv/include/uv.h
 	cmake --build build --config Release
 
 lua-openssl/openssl.so: luv/deps
-	PREFIX=/usr ${MAKE} -C lua-openssl
+	$(MAKE) -C lua-openssl
 
 bitop/bit.so: luv/deps
-	PREFIX=/usr ${MAKE} -C bitop
+	$(MAKE) -C bitop $(BIT_EXTRA)
 
 clean:
 	git clean -xdf
+	$(MAKE) -C bitop clean
+	$(MAKE) -C lua-openssl clean
