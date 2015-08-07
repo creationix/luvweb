@@ -40,3 +40,6 @@
 [submodule "src/lib/path"]
 	path = src/lib/path
 	url = git@github.com:creationix/luv-path.git
+[submodule "lua-openssl"]
+	path = lua-openssl
+	url = https://github.com/zhaozg/lua-openssl.git
