@@ -17,6 +17,8 @@ add_subdirectory(deps/luv)
 include(deps/bitop.cmake)
 
 # Build static lua-openssl with assembly as a lua module (dll/so)
+if(APPLE OR WIN32)
 option(WithSharedOpenSSL "Shared or Static OpenSSL" OFF)
 option(OPENSSL_ENABLE_ASM "Enable Assembly Optimizations" OFF)
+endif()
 include(deps/openssl.cmake)
