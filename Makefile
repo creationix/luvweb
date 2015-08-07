@@ -25,7 +25,7 @@ lua-openssl/openssl.so: luv/deps
 	PREFIX=/usr ${MAKE} -C lua-openssl
 
 bitop/bit.so: luv/deps
-	${MAKE} -C bitop
-	
+	PREFIX=/usr ${MAKE} -C bitop
+
 clean:
 	git clean -xdf
