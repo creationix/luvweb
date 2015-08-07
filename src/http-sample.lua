@@ -9,3 +9,17 @@ coroutine.wrap(function ()
   p(res)
   p(jsonParse(body))
 end)()
+
+createServer({
+  host = "0.0.0.0",
+  port = 8000
+}, function (req, body, socket)
+  p{req=req,body=body,socket=socket}
+  local body = "Hello World\n"
+  return {
+    code = 200,
+    {"Content-Type", "text/plain"},
+    {"Content-Length", #body},
+  }, body
+end)
+print("coro-http server listening on http://localhost:8000/")
