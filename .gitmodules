@@ -1,3 +1,6 @@
 [submodule "luv"]
 	path = luv
 	url = https://github.com/luvit/luv.git
+[submodule "src/lib/pretty-print"]
+	path = src/lib/pretty-print
+	url = git@github.com:creationix/luv-pretty-print.git
