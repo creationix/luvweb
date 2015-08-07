@@ -12,7 +12,7 @@ package.cpath = cwd .. "/lib/?.so;" .. cpath
 -- Install global pretty-printer for easy debugging
 p = require('pretty-print').prettyPrint
 
-require('main')
+require('server')
 
 -- Start the libuv event loop
 uv.run()
