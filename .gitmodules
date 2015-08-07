@@ -4,3 +4,9 @@
 [submodule "src/lib/pretty-print"]
 	path = src/lib/pretty-print
 	url = git@github.com:creationix/luv-pretty-print.git
+[submodule "src/lib/coro-channel"]
+	path = src/lib/coro-channel
+	url = git@github.com:creationix/luv-coro-channel.git
+[submodule "src/lib/coro-net"]
+	path = src/lib/coro-net
+	url = git@github.com:creationix/luv-coro-net.git
