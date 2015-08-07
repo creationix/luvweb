@@ -1,4 +1,5 @@
-all: src/luv.so
+run: src/luv.so
+	cd src && lua main.lua
 
 luv/deps:
 	git submodule update --init luv
