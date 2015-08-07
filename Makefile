@@ -2,7 +2,7 @@ src/luv.so: build/luv.so
 	cp build/luv.so src/luv.so
 
 run: src/luv.so
-	cd src && lua main.lua
+	cd src && lua boot.lua
 
 luv/deps:
 	git submodule update --init

@@ -10,3 +10,18 @@
 [submodule "src/lib/coro-net"]
 	path = src/lib/coro-net
 	url = git@github.com:creationix/luv-coro-net.git
+[submodule "src/lib/http-codec"]
+	path = src/lib/http-codec
+	url = git@github.com:creationix/luv-http-codec.git
+[submodule "src/lib/coro-http"]
+	path = src/lib/coro-http
+	url = git@github.com:creationix/luv-coro-http.git
+[submodule "src/lib/coro-tls"]
+	path = src/lib/coro-tls
+	url = git@github.com:creationix/luv-coro-tls.git
+[submodule "src/lib/coro-wrapper"]
+	path = src/lib/coro-wrapper
+	url = git@github.com:creationix/luv-coro-wrapper.git
+[submodule "src/lib/json"]
+	path = src/lib/json
+	url = git@github.com:creationix/luv-json.git
