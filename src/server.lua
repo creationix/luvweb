@@ -15,7 +15,7 @@ require('weblit/app')
   }, function (req, res, go)
     res.code = 200
     res.headers["Content-Type"] = "text/html"
-    res.body = "<h1>Hello!</h1>"
+    res.body = "<h1>Hello!</h1>\n"
   end)
 
   .start()
