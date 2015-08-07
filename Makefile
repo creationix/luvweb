@@ -5,7 +5,7 @@ run: src/luv.so
 	cd src && lua main.lua
 
 luv/deps:
-	git submodule update --init luv
+	git submodule update --init
 luv/deps/libuv/include/uv.h: luv/deps
 	cd luv && git submodule update --init deps/libuv
 build:
